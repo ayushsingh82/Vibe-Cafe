@@ -12,6 +12,9 @@ Vibe-Café is more than just a digital space — it's an emotional journey where
 - **The Artist**: A bubbly creative soul overflowing with chaotic joy
 - **The Barista**: A quiet music enthusiast who curates playlists based on your feelings
 - **The Poet**: A grumpy wordsmith who challenges your views with sarcasm and depth
+--**Any** : Take any charcater of your choice
+
+
 
 ## ✨ Key Features
 

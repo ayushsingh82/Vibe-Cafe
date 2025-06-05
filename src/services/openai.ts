@@ -41,3 +41,6 @@ export async function getCharacterResponse(character: NounCharacter, userMessage
     return "Sorry, I'm having trouble thinking right now. Can we try again?";
   }
 } 
+
+
+// more services coming soon
