@@ -38,7 +38,7 @@ export async function getCharacterResponse(character: NounCharacter, userMessage
     return data.choices[0].message.content;
   } catch (error) {
     console.error('Error getting AI response:', error);
-    return "Sorry, I'm having trouble thinking right now. Can we try again to solve the issue?";
+    return "Sorry, I'm having trouble thinking right now. Can we try again ?";
   }
 } 
 
