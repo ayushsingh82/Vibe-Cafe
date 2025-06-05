@@ -1,20 +1,35 @@
+import { useState } from 'react';
 import './App.css';
+import { nounCharacters } from './types/nouns';
 
 const NOUNS_IMAGE_BASE = "https://noun.pics/";
 
 function App() {
-  const tokenIds = Array.from({ length: 9 }, (_, i) => 1300 + i);
+  const [hoveredNoun, setHoveredNoun] = useState<number | null>(null);
 
   return (
     <div className="app">
       <div className="container">
         <div className="nouns-container">
-          {tokenIds.map((tokenId) => (
-            <div key={tokenId} className="noun-image">
+          {nounCharacters.map((character) => (
+            <div 
+              key={character.id} 
+              className="noun-image"
+              onMouseEnter={() => setHoveredNoun(character.id)}
+              onMouseLeave={() => setHoveredNoun(null)}
+            >
               <img 
-                src={`${NOUNS_IMAGE_BASE}${tokenId}.png`}
-                alt={`NOUN ${tokenId}`}
+                src={`${NOUNS_IMAGE_BASE}${character.id}.png`}
+                alt={`NOUN ${character.id}`}
               />
+              {hoveredNoun === character.id && (
+                <div className="character-info">
+                  <h3>{character.name}</h3>
+                  <p className="mood">{character.mood}</p>
+                  <p className="bio">{character.bio}</p>
+                  <p className="personality">{character.personality}</p>
+                </div>
+              )}
             </div>
           ))}
         </div>
